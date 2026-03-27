@@ -1,0 +1,15 @@
+[package]
+name = "rust-slab-allocator"
+version = "0.1.0"
+edition = "2021"
+authors = ["MOKDAD Mohamed", "FRIEND_SURNAME FRIEND_NAME"]
+description = "A minimal slab allocator implemented in Rust (no_std)"
+
+[features]
+default = []
+
+[dependencies]
+spin = "0.9"  # Spinlock for no_std environments (no mutex in no_std)
+
+[dev-dependencies]
+# std is available in tests, so we can use normal testing utilities
